@@ -29,4 +29,17 @@ The .tag.tz file is the source archive and the .whl* file is the built archive. 
 represent the distribution archives of our Python package which will be uploaded to the Python 
 Package Index and installed by pip in the following sections.
 
+### Upload the package
 
+We'll upload the package to PyPI.
+If we're just testing things out initially, we can upload to TestPyPI instead.
+Then upload to PyPI after.
+
+Make an account at https://test.pypi.org/
+
+After making an API token, we need to upload our distribution archives. To do so, we have to use an 
+upload tool to upload our package. The official PyPI upload tool is twine, so let's install twine 
+and upload our distribution archives under the dist/ directory.
+
+    python -m pip install --upgrade twine
+    python -m twine upload --repository testpypi dist/*

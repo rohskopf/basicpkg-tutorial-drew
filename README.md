@@ -60,4 +60,12 @@ Then install your package with pip like:
     python -m pip install basicpkg-tutorial-drew
     
 After this, you can use the package!
+
+If you wanna change the setup configuration, dependencies, etc, make sure to delete `dist/` and `src/basicpkg*` 
+first. Then repeat the
+
+    python -m build
+    python -m twine upload
+    
+process.
     

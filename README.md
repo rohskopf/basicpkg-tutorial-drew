@@ -65,7 +65,7 @@ If you wanna change the setup configuration, dependencies, etc, make sure to del
 first. Then repeat the
 
     python -m build
-    python -m twine upload
+    twine upload dist/*
     
 process.
     

@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/basicpkg_tutorial_drew.egg-info/PKG-INFO
+src/basicpkg_tutorial_drew.egg-info/SOURCES.txt
+src/basicpkg_tutorial_drew.egg-info/dependency_links.txt
+src/basicpkg_tutorial_drew.egg-info/top_level.txt
+src/divide/__init__.py
+src/divide/divide_by_three.py
+src/multiply/__init__.py
+src/multiply/multiply_by_three.py
+tests/test_divide_by_three.py
+tests/test_multiply_by_three.py

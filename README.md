@@ -9,13 +9,15 @@ decide to change the build system to flit or poetry, for example.
 
 ### Usage
 
+NOTE: You cannot use as follows unless you build the package. See further instructions.
+
 E.g.
 
-    from multiply.by_three import multiply_by_three
-    from divide.by_three import divide_by_three
+    from multiply import multiply_by_three
+    from divide import divide_by_three
 
-    multiply_by_three(9)
-    divide_by_three(21)
+    multiply_by_three.multiply_by_three(9)
+    divide_by_three.divide_by_three(21)
 
 ### Generate distribution archives
 
@@ -35,6 +37,8 @@ We'll upload the package to PyPI.
 If we're just testing things out initially, we can upload to TestPyPI instead.
 Then upload to PyPI after.
 
+#### Test PyPI
+
 Make an account at https://test.pypi.org/
 
 After making an API token, we need to upload our distribution archives. To do so, we have to use an 
@@ -43,3 +47,17 @@ and upload our distribution archives under the dist/ directory.
 
     python -m pip install --upgrade twine
     python -m twine upload --repository testpypi dist/*
+    
+#### Actual PyPI
+
+After using `python -m build` to create a `dist/` directory, do
+
+    python -m pip install --upgrade twine
+    twine upload dist/*
+    
+Then install your package with pip like:
+
+    python -m pip install basicpkg-tutorial-drew
+    
+After this, you can use the package!
+    

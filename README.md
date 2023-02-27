@@ -57,7 +57,11 @@ After using `python -m build` to create a `dist/` directory, do
     
 Then install your package with pip like:
 
+    # If using actual PyPI:
     python -m pip install basicpkg-tutorial-drew
+    
+    # If using Test PyPI:
+    python -m pip install --index-url https://test.pypi.org/simple/ --no-deps basicpkg-tutorial-drew
     
 After this, you can use the package!
 
